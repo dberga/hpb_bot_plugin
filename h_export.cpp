@@ -58,7 +58,7 @@ void WINAPI GiveFnptrsToDll( enginefuncs_t* pengfuncsFromEngine, globalvars_t *p
 
    game_dll_filename[0] = 0;
 
-   if (strcmpi(mod_name, "valve") == 0)
+   if (_strcmpi(mod_name, "valve") == 0)
    {
       mod_id = VALVE_DLL;
 #ifndef __linux__
@@ -67,7 +67,7 @@ void WINAPI GiveFnptrsToDll( enginefuncs_t* pengfuncsFromEngine, globalvars_t *p
       strcpy(game_dll_filename, "valve/dlls/hl_i386.so");
 #endif
    }
-   else if (strcmpi(mod_name, "tfc") == 0)
+   else if (_strcmpi(mod_name, "tfc") == 0)
    {
       mod_id = TFC_DLL;
 #ifndef __linux__
@@ -76,7 +76,7 @@ void WINAPI GiveFnptrsToDll( enginefuncs_t* pengfuncsFromEngine, globalvars_t *p
       strcpy(game_dll_filename, "tfc/dlls/tfc_i386.so");
 #endif
    }
-   else if (strcmpi(mod_name, "cstrike") == 0)
+   else if (_strcmpi(mod_name, "cstrike") == 0)
    {
       mod_id = CSTRIKE_DLL;
 #ifndef __linux__
@@ -85,7 +85,7 @@ void WINAPI GiveFnptrsToDll( enginefuncs_t* pengfuncsFromEngine, globalvars_t *p
       strcpy(game_dll_filename, "cstrike/dlls/cs_i386.so");
 #endif
    }
-   else if (strcmpi(mod_name, "gearbox") == 0)
+   else if (_strcmpi(mod_name, "gearbox") == 0)
    {
       mod_id = GEARBOX_DLL;
 #ifndef __linux__
@@ -94,7 +94,7 @@ void WINAPI GiveFnptrsToDll( enginefuncs_t* pengfuncsFromEngine, globalvars_t *p
       strcpy(game_dll_filename, "gearbox/dlls/opfor_i386.so");
 #endif
    }
-   else if (strcmpi(mod_name, "frontline") == 0)
+   else if (_strcmpi(mod_name, "frontline") == 0)
    {
       mod_id = FRONTLINE_DLL;
 #ifndef __linux__
@@ -103,7 +103,7 @@ void WINAPI GiveFnptrsToDll( enginefuncs_t* pengfuncsFromEngine, globalvars_t *p
       strcpy(game_dll_filename, "frontline/dlls/front_i386.so");
 #endif
    }
-   else if (strcmpi(mod_name, "holywars") == 0)
+   else if (_strcmpi(mod_name, "holywars") == 0)
    {
       mod_id = HOLYWARS_DLL;
 #ifndef __linux__
@@ -112,7 +112,7 @@ void WINAPI GiveFnptrsToDll( enginefuncs_t* pengfuncsFromEngine, globalvars_t *p
       strcpy(game_dll_filename, "holywars/dlls/holywars_i386.so");
 #endif
    }
-   else if (strcmpi(mod_name, "dmc") == 0)
+   else if (_strcmpi(mod_name, "dmc") == 0)
    {
       mod_id = DMC_DLL;
 #ifndef __linux__

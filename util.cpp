@@ -311,7 +311,7 @@ int UTIL_GetTeam(edict_t *pEntity)
          {
             // check that team isn't defined twice
             for (i=0; i < num_teams; i++)
-               if (stricmp(pName, team_names[i]) == 0)
+               if (_stricmp(pName, team_names[i]) == 0)
                   break;
             if (i == num_teams)
             {
@@ -327,7 +327,7 @@ int UTIL_GetTeam(edict_t *pEntity)
 
       for (int index=0; index < num_teams; index++)
       {
-         if (stricmp(model_name, team_names[index]) == 0)
+         if (_stricmp(model_name, team_names[index]) == 0)
             return index;
       }
 

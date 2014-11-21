@@ -1987,7 +1987,7 @@ void WaypointRouteInit(void)
 
          UTIL_BuildFileName(filename2, "maps", mapname);
 
-         if (access(filename2, 0) == 0)  // does the .HPB_wpX file exist?
+         if (_access(filename2, 0) == 0)  // does the .HPB_wpX file exist?
          {
             file1 = open(filename, O_RDONLY);
             file2 = open(filename2, O_RDONLY);

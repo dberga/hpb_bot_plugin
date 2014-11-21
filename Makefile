@@ -3,7 +3,11 @@ TARGET = hpb_bot_mm
 ARCHFLAG = i586
 BASEFLAGS = -Dstricmp=strcasecmp -Dstrcmpi=strcasecmp
 OPTFLAGS = 
-CPPFLAGS = ${BASEFLAGS} ${OPTFLAGS} -march=${ARCHFLAG} -O2 -w -I"../metamod" -I"../../devtools/hlsdk-2.3/multiplayer/common" -I"../../devtools/hlsdk-2.3/multiplayer/dlls" -I"../../devtools/hlsdk-2.3/multiplayer/engine" -I"../../devtools/hlsdk-2.3/multiplayer/pm_shared"
+METAMODSRC = ../metamod-1.20
+HLSDKSRC = ../hlsdk-2.3
+METAMODFLAGS = -I $(METAMODSRC)/metamod
+HLSDKFLAGS = -I $(HLSDKSRC)/multiplayer/common -I $(HLSDKSRC)/multiplayer/dlls -I $(HLSDKSRC)/multiplayer/engine -I $(HLSDKSRC)/multiplayer/pm_shared
+CPPFLAGS = ${BASEFLAGS} ${OPTFLAGS} -march=${ARCHFLAG} -O2 -w ${METAMODFLAGS} ${HLSDKFLAGS}
 
 OBJ = 	bot.o \
 	bot_chat.o \
