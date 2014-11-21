@@ -10,14 +10,21 @@ Changes needed in each dependency code
 ---
 #### hlsdk2.3
 *in engine/eiface.h:
+	
 	from "char" to "const char"
+	
 	add "#undef ARRAYSIZE" before  "#define ARRAYSIZE(p)		(sizeof(p)/sizeof(p[0]))"
 *in dlls/Makefile.make
+	
 	add flags for the case of DO_C
+	
 	add the following flags for compiling optimization
+	     
 	     -Wall -Wno-non-virtual-dtor -Wno-invalid-offsetof -Werror -m486 -O1 C_FLAGS=$(BASE_CFLAGS) -Wall -Werror	
-*en dlls/h_export:
+*in dlls/h_export:
+	
 	redefine DLLEXPORT
+	
 	add extern "C" for the function GiveFnptrsToDll
 
 #### metamod-1.20
@@ -26,9 +33,12 @@ Changes needed in each dependency code
 Changelog from hpb_bot_template_4 to this repos
 ---
 *in h_export.cpp; util.cpp; waypoint.cpp:
+	
 	POSIX name of functions from "stricmp" to "_stricmp"
+	
 	POSIX name of functions from "access" to "_access"
 *in engine.cpp:
+	
 	in functions pfnXXX change from "char" to "const char"
 	
 	
