@@ -41,7 +41,11 @@ Changelog from hpb_bot_template_4 to this repos
 	
 	in functions pfnXXX change from "char" to "const char"
 	
-	
-Official Site
+Build
 ---
-[here](http://hpb-bot.bots-united.com/index.html)
+To build de project, open the "HPB_bot_mm.dsp" with Visual Studio
+
+Generic Info
+---
+Readme in detail [here](https://github.com/dberga/hpb_bot_plugin/blob/master/ReadMe.txt)
+Official site [here](http://hpb-bot.bots-united.com/index.html)
